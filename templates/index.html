@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        div.sec {
+                border: 2px solid firebrick;
+                border-radius: 15px;
+                align-items: center;
+                padding:8px;
+                background-color: white;
+            }
+        thead{
+                font-weight: 500;
+        }
+    </style>
+
+</head>
+
+<body style="margin:1%; background-image: url(/static/black-metal-plate-texture-stainless-steel-background-with-black-gradient-and-diagonal-lines-modern-illustration-vector.webp);">
+
+    <div class="ppal" style="display: flex;">   
+
+        <div class="sec" style="padding-top: 4px;min-width: 89%; height: auto;display:grid">
+
+            <h1 style="text-align: center; margin-bottom: 4px;max-width: 100%; height: auto;">
+                <img src="{{url_for('static', filename='musimundo.jfif')}}" style="max-width: 23%; height: auto" 
+                alt="Musimundo Logo"/>
+            </h1>
+
+            <table class="table table-striped" style="margin:0px;max-width: 100%; height: auto;">
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Precio</td>
+                        <td>Tamaño pantalla</td>
+                        <td>Almacenamiento</td>
+                        <td>Comparativa</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for cellphones in musimundo_list %}
+                    <tr>
+                        <td>{{cellphones[0]}}</td>
+                        <td>$ {{cellphones[1]}}</td>
+                        <td>{{cellphones[2]}}"</td>
+                        <td>{{cellphones[3]}}</td>
+                        <td style="color:firebrick"><b>{{cellphones[4]}}</b></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="sec" style="max-width: 10%;margin-left: 1%; display: flex; align-items: center;">
+            <div>
+                <img src="{{url_for('static', filename='s21violeta.jfif')}}" style="max-width:100%; height: auto"/>
+                <h1 style="font-size: small; text-align: center;">SAMSUNG GALAXY S21 VIOLETA</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ppal" style="display: flex; margin-top: 10px;">    
+
+        <div class="sec" style="min-width: 89%; height: auto;display:grid">
+
+            <h1 style="text-align: center">
+                <img src="{{url_for('static', filename='compumundo.png')}}" style="max-width: 25%; height: auto" 
+                alt="Compumundo Logo"/>
+            </h1>
+        
+            <table class="table table-striped" style="margin:0px;margin:0px;max-width: 100%; height: auto;"> 
+
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Precio</td>
+                        <td>Tamaño pantalla</td>
+                        <td>Almacenamiento</td>
+                        <td>Comparativa</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for cellphones in compumundo_list %}
+                    <tr>
+                        <td>{{cellphones[0]}}</td>
+                        <td>$ {{cellphones[1]}}</td>
+                        <td>{{cellphones[2]}}"</td>
+                        <td>{{cellphones[3]}}</td>
+                        <td style="color:firebrick"><b>{{cellphones[4]}}</b></td>
+                    {% endfor %}
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <div class="sec" style="max-width: 10%;margin-left: 1%;vertical-align: middle; display: flex; align-items: center;">
+            <div>
+                <img src="{{url_for('static', filename='s21plusgris.jfif')}}" style="max-width:100%; height: auto"/>
+                <h1 style="font-size: small; text-align: center;">SAMSUNG GALAXY S21+ GRIS</h1>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

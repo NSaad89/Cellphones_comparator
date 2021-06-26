@@ -1,0 +1,5 @@
+{
+    "python.globalModuleInstallation": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.pythonPath": "C:\\Users\\natal\\miniconda3\\python.exe"
+}
